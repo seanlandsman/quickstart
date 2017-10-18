@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1>`,
+    selector: 'my-app',
+    templateUrl: './app.component.html'
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent {
+    showHeading = true;
+    heroes = ['Magneta', 'Bombasto', 'Magma', 'Tornado'];
+
+    toggleHeading() {
+        this.showHeading = !this.showHeading;
+    }
+}
